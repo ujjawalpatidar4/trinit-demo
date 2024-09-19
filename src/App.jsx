@@ -144,9 +144,23 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import { motion } from 'framer-motion';
 import './App.css'
-import "./custom.css"
-
 import { FaMouse , FaAngleDoubleDown} from 'react-icons/fa';
+
+// import "./custom.css"
+// import {
+//   Animator,
+//   Fade,
+//   FadeIn,
+//   MoveIn,
+//   MoveOut,
+//   ScrollContainer,
+//   ScrollPage,
+//   Sticky,
+//   StickyIn,
+//   ZoomIn,
+//   batch,
+// } from "react-scroll-motion";
+
 
 
 const container = {
@@ -208,29 +222,31 @@ function App() {
   //   };
   // },[]);
 
-  useEffect(()=>{
-    const handleScroll = ()=>{
-      const screen2 = document.querySelector(".screen2");
-      if(window.scrollY>0){
-        screen2.classList.add("slide-in");
-      }else{
-        screen2.classList.remove("slide-in");
-      }
-      window.addEventListener("scroll",handleScroll);
-      return () => {
-        window.removeEventListener("scroll",handleScroll);
-      }
-    }
-  },[]);
+  // useEffect(()=>{
+  //   const handleScroll = ()=>{
+  //     const screen2 = document.querySelector(".screen2");
+  //     if(window.scrollY>0){
+  //       screen2.classList.add("slide-in");
+  //     }else{
+  //       screen2.classList.remove("slide-in");
+  //     }
+  //   }
+  //     window.addEventListener("scroll",handleScroll);
+  //     return () => {
+  //       window.removeEventListener("scroll",handleScroll);
+  //     }
+  // },[]);
+  // console.log
   
   return (
     <>
       
 
       {/* hero-section */}
+      
       <section className="screen1 relative w-full h-screen overflow-hidden">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover object-contain"
+          className="absolute top-0 left-0 w-full h-full object-cover "
           autoPlay
           muted
           loop
@@ -267,7 +283,6 @@ function App() {
 
         </div>
       </section>
-
       {/* features-section */}
       <section className="screen2 relative h-screen bg-cover bg-no-repeat bg-black flex items-center justify-center translate-y-full will-change-transform transition-transform duration-[1000ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
         style={{
@@ -304,7 +319,7 @@ function App() {
         </div>
         
       </section>
-
+      
     </>
   );
 }

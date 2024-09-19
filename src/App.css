@@ -1,7 +1,3 @@
-* {
-  scroll-behavior: smooth;
-}
-
 .rounded-slide-button {
   position: relative;
   display: inline-block;
@@ -31,8 +27,4 @@
 
 .rounded-slide-button:hover {
   transform: scale(1.05);
-}
-
-.slide-in {
-  transform: translateY(0);
 }
